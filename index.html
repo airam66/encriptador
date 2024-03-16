@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <title>Encriptador de texto</title>
+</head>
+<body>
+
+    <main class="container">
+       <section class="container-input">
+            <div class="content">
+                <textarea name="textarea" id="input_text" cols="30" rows="15" placeholder="Ingrese el texto aqui" onkeypress="return ((event.charCode >= 97 && event.charCode <= 122) || event.charCode == 32)"></textarea>
+               
+            </div>
+            
+            <div class="content">
+                <p class="paragraph"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    Solo letras minusculas y sin acentos</p>
+                <div class="container-btn">
+                    <button class="btn btn-orange" onclick="encrypt();">Encriptar</button>
+                    <button class="btn btn-green" onclick="decrypt();">Desencriptar</button>
+                </div>
+                    
+             </div>
+
+
+       </section>
+
+       <section class="container-encrypt">
+            <div class="text-initial">
+                <img src="imagen.svg" class="img" alt="Una carpeta con signo de pregunta y una lupa">
+                <h2>Ningún mensaje fue encontrado</h2>
+                <p>Ingresa el texto que desees encriptar o desencriptar</p>
+            </div>
+            <div class="text-encrypt hidden">
+                <p id="show_text"></p>
+                <button class="btn btn-grey" onclick="copy();">Copiar</button>
+            </div>
+
+       </section>
+
+      
+    </main>
+    <footer class="text-center">
+        <p>Desarrollado por <a href="https://github.com/airam66/encriptador" target="_blank"> airam66</a></p>
+        
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
