@@ -7,12 +7,12 @@
 body{
 background: #CEE2AD;
 background: linear-gradient(180deg, #d8e2c7, #f1d69f);
-height: 100vh;
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
 font-family: Arial, Helvetica, san-serif;
+min-height: 100vh;
 }
 
 p{
@@ -22,15 +22,15 @@ p{
 
 
 .container{
-  width: 1200px;
-  height: 560px;
-  margin:0 20px;
-  background-image: linear-gradient(to left, rgba(255, 255, 255, 0.472), rgba(255, 255, 255, 0.365));
-  display: flex;
-  justify-content: space-between;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
+    width: 80%;
+    height: 560px;
+    margin:10px 20px;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.472), rgba(255, 255, 255, 0.365));
+    display: flex;
+    justify-content: space-between;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
 }
 
 .container-input{
@@ -68,8 +68,10 @@ textarea{
 
 .container-btn{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap:10px
   
 }
 
@@ -135,14 +137,13 @@ textarea{
     width: 75%;
 }
 
-
-
 .text-encrypt{
     display: flex;
     height: 100%;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    text-align: left;
 }
 
 .hidden{
@@ -171,10 +172,6 @@ a{
 
 
 @media screen and (max-width: 767px){
-    body {
-        height: auto;
-      }
-
     .container{
         flex-direction: column;
         align-items: center;
@@ -188,6 +185,7 @@ a{
     .container-encrypt{
         box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
         border-radius: 20px;
+        min-height: 385px;
     }
 
     textarea{
@@ -196,22 +194,11 @@ a{
    
 
     .img{
-        width: 80%;
-    }
-    
-}
-
-@media screen and (max-width: 500px){
-    .container-btn{
-      flex-direction: column;
+        width: 60%;
     }
 
-    .btn{
-        margin: 10px 0;
-    }
-    .container{
-        margin:5px 0;
-        width: 90%;
+    .text-encrypt{
+        min-height: 385px;
+        justify-content: space-between;
     }
 }
-

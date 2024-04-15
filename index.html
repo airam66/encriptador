@@ -13,7 +13,7 @@
     <main class="container">
        <section class="container-input">
             <div class="content">
-                <textarea name="textarea" id="input_text" cols="30" rows="15" placeholder="Ingrese el texto aqui" onkeypress="return ((event.charCode >= 97 && event.charCode <= 122) || event.charCode == 32)"></textarea>
+                <textarea name="textarea" id="input_text" cols="30" rows="15" placeholder="Ingrese el texto aqui" onkeydown="return checkKey(event.key)" ></textarea>
                
             </div>
             
@@ -21,8 +21,8 @@
                 <p class="paragraph"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>
                     Solo letras minusculas y sin acentos</p>
                 <div class="container-btn">
-                    <button class="btn btn-orange" onclick="encrypt();">Encriptar</button>
-                    <button class="btn btn-green" onclick="decrypt();">Desencriptar</button>
+                    <button class="btn btn-orange" id="btn-encrypt" onclick="encrypt();">Encriptar</button>
+                    <button class="btn btn-green" id="btn-decrypt" onclick="decrypt();">Desencriptar</button>
                 </div>
                     
              </div>
@@ -38,7 +38,7 @@
             </div>
             <div class="text-encrypt hidden">
                 <p id="show_text"></p>
-                <button class="btn btn-grey" onclick="copy();">Copiar</button>
+                <button class="btn btn-grey" id="btn-copy">Copiar</button>
             </div>
 
        </section>
